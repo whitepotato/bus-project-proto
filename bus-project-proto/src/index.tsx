@@ -8,7 +8,7 @@ import Order from './view/order/Order';
 import LoginPage from './view/LoginPage';
 
 
-ReactDOM.render(<LoginPage />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

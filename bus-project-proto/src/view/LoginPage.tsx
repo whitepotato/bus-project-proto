@@ -6,6 +6,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
 import CardHeader from '@material-ui/core/CardHeader';
+import { Link } from 'react-router-dom';
+import Order from './order/Order';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -31,6 +33,8 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
+let isLoggedIn:boolean = false;
+
 const LoginPage = () => {
   const classes = useStyles();
   const [username, setUsername] = useState('');
@@ -51,6 +55,8 @@ const LoginPage = () => {
     if (username === 'nihon' && password === 'takasaki') {
       setError(false);
       setHelperText('Login Successfully');
+      isLoggedIn = true;
+      push("/staff/admin");
     } else {
       setError(true);
       setHelperText('Incorrect username or password')
@@ -63,6 +69,9 @@ const LoginPage = () => {
     }
   };
 
+  if(isLoggedIn){
+    return (<Order />)
+  }
   return (
     <React.Fragment>
       <form className={classes.container} noValidate autoComplete="off">
