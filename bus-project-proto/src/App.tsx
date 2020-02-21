@@ -7,7 +7,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  BrowserRouter
 } from "react-router-dom";
 import LoginPage from "./view/LoginPage";
 
