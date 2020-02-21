@@ -22,7 +22,7 @@ const App = () => {
     return <React.Fragment />;
   }*/
   return(
-    <Router>
+    <BrowserRouter>
   <Switch>
   <div>
     <Route exact path="/" component={LoginPage} />
@@ -30,7 +30,7 @@ const App = () => {
     <Route path="/check" component={Checkout} />
   </div>
 </Switch>
-</Router>);
+</BrowserRouter>);
 };
 
 export default App;
