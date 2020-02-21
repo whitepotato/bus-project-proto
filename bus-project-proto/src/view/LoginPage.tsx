@@ -56,7 +56,6 @@ const LoginPage = () => {
       setError(false);
       setHelperText('Login Successfully');
       isLoggedIn = true;
-      push("/staff/admin");
     } else {
       setError(true);
       setHelperText('Incorrect username or password')

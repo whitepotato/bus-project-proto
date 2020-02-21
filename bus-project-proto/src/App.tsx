@@ -22,12 +22,14 @@ const App = () => {
     return <React.Fragment />;
   }*/
   return(
-  <Router>
+    <Router>
+  <Switch>
   <div>
     <Route exact path="/" component={LoginPage} />
     <Route path="/order" component={Order} />
     <Route path="/check" component={Checkout} />
   </div>
+</Switch>
 </Router>);
 };
 
