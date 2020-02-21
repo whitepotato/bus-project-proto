@@ -7,7 +7,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  BrowserRouter
 } from "react-router-dom";
 import LoginPage from "./view/LoginPage";
 
@@ -22,15 +23,15 @@ const App = () => {
     return <React.Fragment />;
   }*/
   return(
-    <Router>
+    <BrowserRouter>
   <Switch>
   <div>
-    <Route exact path="/" component={LoginPage} />
+    <Route exact path="/" component={Order} />
     <Route path="/order" component={Order} />
     <Route path="/check" component={Checkout} />
   </div>
 </Switch>
-</Router>);
+</BrowserRouter>);
 };
 
 export default App;
