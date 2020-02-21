@@ -1,16 +1,10 @@
 import React, { useState } from "react";
 import Typography from "@material-ui/core/Typography";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
 import Grid from "@material-ui/core/Grid";
 import {
-  Theme,
   makeStyles,
-  createStyles,
   TextField,
   FormControlLabel,
-  Checkbox,
   CssBaseline,
   AppBar,
   Toolbar,
@@ -22,14 +16,10 @@ import {
   Button
 } from "@material-ui/core";
 import Autocomplete from "@material-ui/lab/Autocomplete";
-import {
-  KeyboardDatePicker,
-  MuiPickersUtilsProvider
-} from "@material-ui/pickers";
+
 import DateFnsUtils from "@date-io/date-fns";
 import TitlePotato from "../checkout/title_potato_s.png";
 import foo from "./m.jpg";
-import classNames from "classnames";
 
 enum WayType {
   ONE_WAY,
@@ -72,13 +62,13 @@ const useStyles = makeStyles(theme => ({
     marginLeft: theme.spacing(2),
     marginRight: theme.spacing(2),
     [theme.breakpoints.up(600 + theme.spacing(2) * 2)]: {
-      opacity: 0.5,
       width: 600,
       marginLeft: "auto",
       marginRight: "auto"
     }
   },
   paper: {
+    background: `rgba(255, 255, 255, 0.7)`,
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(3),
     padding: theme.spacing(2),
@@ -153,7 +143,6 @@ export default function Order() {
             <br />
             <Grid container spacing = {3}>
             <FormControl component="fieldset">
-              <FormLabel component="legend">labelPlacement</FormLabel>
               <RadioGroup
                 aria-label="position"
                 name="position"
@@ -211,18 +200,8 @@ export default function Order() {
               />
 
               <Grid item xs={12} sm={6}>
-                <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                  <KeyboardDatePicker
-                    value={selectedDate}
-                    margin="normal"
-                    id="date-picker-dialog"
-                    format="yyyy/MM/dd"
-                    onChange={handleDateChange}
-                    KeyboardButtonProps={{
-                      "aria-label": "change date"
-                    }}
-                  />
-                </MuiPickersUtilsProvider>
+
+{/**ここにカレンダー　IE対策で一旦除去 */}
               </Grid>
 
               <Grid item xs={12} className = {classes.button} >
