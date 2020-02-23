@@ -26,7 +26,7 @@ const App = () => {
     <BrowserRouter>
   <Switch>
   <div>
-    <Route exact path="/" component={Order} />
+    <Route exact path="/" component={LoginPage} />
     <Route path="/order" component={Order} />
     <Route path="/check" component={Checkout} />
   </div>
