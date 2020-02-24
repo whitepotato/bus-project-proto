@@ -18,17 +18,19 @@
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.6",
     "date-fns": "^2.0.0-beta.5",
     "eslint": "^6.8.0",
     "formik": "^2.1.4",
     "history": "^4.10.1",
     "react": "^16.12.0",
+    "react-app-polyfill": "^1.0.6",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
     "react-intl": "^3.12.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.1",
+    "react-scripts": "3.2.0",
     "typescript": "~3.7.2",
     "yup": "^0.28.1"
   },
@@ -46,7 +48,7 @@
       ">0.2%",
       "not dead",
       "not op_mini all",
-       "ie 11"
+      "ie 11"
     ],
     "development": [
       "last 1 chrome version",
@@ -60,8 +62,10 @@
   },
   "babel": {
     "presets": [
-      "react",
-      "es2015"
+      "react-app"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-object-assign"
     ]
   }
 }

@@ -9,8 +9,9 @@ export default function AddressForm() {
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
-        お客様情報
+        お客様情報　
       </Typography>
+      <h5 style = {{ color:'red'}}>これはサンプルです。個人情報は入力しないでください。未入力の状態で次へのページ繊維できます。</h5>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
           <TextField

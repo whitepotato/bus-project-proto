@@ -37,7 +37,7 @@ export default function Review() {
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
-        Order summary
+       ご購入情報
       </Typography>
       <List disablePadding>
         {products.map(product => (
@@ -49,14 +49,14 @@ export default function Review() {
         <ListItem className={classes.listItem}>
           <ListItemText primary="Total" />
           <Typography variant="subtitle1" className={classes.total}>
-            $34.06
+            3400Yen
           </Typography>
         </ListItem>
       </List>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>
           <Typography variant="h6" gutterBottom className={classes.title}>
-            Shipping
+            お客様情報
           </Typography>
           <Typography gutterBottom>山田　太郎</Typography>
           <Typography gutterBottom>{addresses.join(', ')}</Typography>

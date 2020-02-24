@@ -20,6 +20,7 @@ import Autocomplete from "@material-ui/lab/Autocomplete";
 import DateFnsUtils from "@date-io/date-fns";
 import TitlePotato from "../checkout/title_potato_s.png";
 import foo from "./m.jpg";
+import { Link } from "react-router-dom";
 
 enum WayType {
   ONE_WAY,
@@ -93,6 +94,14 @@ const useStyles = makeStyles(theme => ({
     marginLeft: theme.spacing(0),
     height: theme.spacing(4),
     width: theme.spacing(4)
+  },
+  warningText: {
+    display        : 'inline-block',
+    color          : '#ffffff',            /* 文字の色 */
+    fontSize      : '12pt',               /* 文字のサイズ */
+    letterSpacing : '2px',               /* 文字間 */
+    textShadow    : 
+         '1px  1px 0px #000000',
   }
 }));
 
@@ -211,8 +220,9 @@ export default function Order() {
               </Grid>
             </Grid>
           </Paper>
+          <div  className = {classes.warningText}> <h3>検索ボタンは、ダミーです。<br />購入画面サンプルは</h3><Link to="/check" ><h3>Admin</h3></Link><h3>から確認可能です。</h3></div>
         </main>
-      </div>
+             </div>
     </React.Fragment>
   );
 }

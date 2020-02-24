@@ -115,6 +115,7 @@ const LoginPage = () => {
             </Button>
           </CardActions>
         </Card>
+        * プロトタイプ版では、Internet Explorerにおいて、一部表示が異なったり、ブランクページになる可能性があります。
       </form>
     </React.Fragment>
   );

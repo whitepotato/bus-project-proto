@@ -9,7 +9,7 @@ export default function PaymentForm() {
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
-        Payment method
+        お支払い方法Payment method(これはサンプルです。カード情報を入力しないでください。)
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
@@ -33,7 +33,7 @@ export default function PaymentForm() {
         <Grid item xs={12}>
           <FormControlLabel
             control={<Checkbox color="secondary" name="saveCard" value="yes" />}
-            label="Remember credit card details for next time"
+            label="カード情報を保存する/Remember credit card details for next time"
           />
         </Grid>
       </Grid>
