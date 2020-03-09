@@ -16,7 +16,10 @@ import {
   Button
 } from "@material-ui/core";
 import Autocomplete from "@material-ui/lab/Autocomplete";
-
+import {
+  KeyboardDatePicker,
+  MuiPickersUtilsProvider
+} from "@material-ui/pickers";
 import DateFnsUtils from "@date-io/date-fns";
 import TitlePotato from "../checkout/title_potato_s.png";
 import foo from "./m.jpg";
@@ -209,8 +212,20 @@ export default function Order() {
               />
 
               <Grid item xs={12} sm={6}>
+<MuiPickersUtilsProvider utils={DateFnsUtils}>
+                  <KeyboardDatePicker
+                    value={selectedDate}
+                    margin="normal"
+                    id="date-picker-dialog"
+                    format="yyyy/MM/dd"
+                    onChange={handleDateChange}
+                    KeyboardButtonProps={{
+                      "aria-label": "change date"
+                    }}
+                  />
+                </MuiPickersUtilsProvider>
 
-{/**ここにカレンダー　IE対策で一旦除去 */}
+
               </Grid>
 
               <Grid item xs={12} className = {classes.button} >
